@@ -1,0 +1,30 @@
+{
+  "name": "kraken-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kaplanmaxe/kraken-api.git",
+  "author": "Max Kaplan <kaplanmaxe3@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/got": "^7.1.6",
+    "@types/nock": "^9.1.2",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0",
+    "nock": "^9.1.6",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.10.0",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "got": "^8.0.3"
+  },
+  "scripts": {
+    "prepublish": "yarn compile",
+    "compile": "tsc",
+    "compile:watch": "tsc -w",
+    "test": "mocha --require ts-node/register --watch-extensions ts,tsx \"__tests__/**/*.spec.{ts,tsx}\"",
+    "typedoc": "typedoc --out docs/ src/**/*.ts"
+  }
+}
