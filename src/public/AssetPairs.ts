@@ -37,7 +37,7 @@ export interface IAssetPairResult {
 }
 
 export async function assetPairs(query?: IAssetPairInput): Promise<IKrakenResponse<IAssetPairResult>> {
-  const response = await publicFetch<IAssetPairResult, IAssetPairInput>(
+  const response = await publicFetch<IAssetPairInput, IAssetPairResult>(
     'https://api.kraken.com/0/public/AssetPairs',
     query,
   );

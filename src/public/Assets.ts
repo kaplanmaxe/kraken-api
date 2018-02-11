@@ -18,6 +18,6 @@ export interface IAssetResult {
 }
 
 export async function assets(query?: IAssetInput): Promise<IKrakenResponse<IAssetResult>> {
-  const response = await publicFetch<IAssetResult, IAssetInput>('https://api.kraken.com/0/public/Assets', query);
+  const response = await publicFetch<IAssetInput, IAssetResult>('https://api.kraken.com/0/public/Assets', query);
   return response;
 }

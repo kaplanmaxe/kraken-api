@@ -7,6 +7,6 @@ export interface ITimeResult {
 }
 
 export async function time(): Promise<IKrakenResponse<ITimeResult>> {
-  const response = await publicFetch<ITimeResult>('https://api.kraken.com/0/public/Time');
+  const response = await publicFetch<{}, ITimeResult>('https://api.kraken.com/0/public/Time');
   return response;
 }
