@@ -3,3 +3,4 @@ node_js:
   - '6'
 install:
   - yarn install
+after_success: yarn coverage
